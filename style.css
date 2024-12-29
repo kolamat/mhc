@@ -7,6 +7,13 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: space-between;
 }
 
 header {
@@ -21,15 +28,18 @@ header {
   justify-content: space-between;
   list-style: none;
   gap: 30px;
-  text-wrap: wrap;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+.bg-img {
+  position: absolute;
+  bottom: 0%;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/images/schoollogo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(8px);
 }
 
 h1 {
@@ -46,4 +56,19 @@ li a {
 
 li a:hover {
   text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 1px solid #f1f1f1;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
 }
