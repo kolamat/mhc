@@ -9,6 +9,21 @@ body {
   background-color: #ffffff;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  place-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 30px;
+  text-wrap: wrap;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -23,4 +38,12 @@ h1 {
 
 .logo {
   border-radius: 5px;
+}
+
+li a {
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
 }
