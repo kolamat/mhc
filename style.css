@@ -9,11 +9,11 @@ body {
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
-  /* overflow: hidden; */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 header {
@@ -21,6 +21,8 @@ header {
   justify-content: space-between;
   padding: 10px 15px;
   place-items: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .nav-links {
@@ -28,6 +30,9 @@ header {
   justify-content: space-between;
   list-style: none;
   gap: 30px;
+  padding-right: 15px;
+  color: black;
+  border: 1px 1px 0px solid #f1f1f1;
 }
 
 .bg-img {
@@ -52,6 +57,7 @@ h1 {
 
 li a {
   text-decoration: none;
+  color: white;
 }
 
 li a:hover {
@@ -59,16 +65,46 @@ li a:hover {
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-weight: bold;
-  border: 1px solid #f1f1f1;
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  border-color: white;
   z-index: 2;
   width: 100vw;
-  height: 100vh;
-  padding: 20px;
+  height: 70vh;
+  padding: 0px 15px;
+}
+
+#hero {
+  align-items: center;
+  align-content: center;
   text-align: center;
+  text-align: center;
+  width: 100vw;
+  height: 70vh;
+  color: white;
+}
+
+#hero .hero-content h1 {
+  font-size: 100px;
+}
+#hero .hero-content a {
+  padding: 15px 0px;
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  color: black;
+  z-index: 2;
+  text-align: center;
+  height: 100%;
+  align-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: white;
+  padding: 0px 15px 15px;
 }
