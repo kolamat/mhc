@@ -23,6 +23,10 @@ header {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+header nav {
+  display: flex;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;
@@ -30,8 +34,27 @@ header {
   gap: 30px;
   padding-right: 15px;
   color: black;
-  /* border: 1px 1px 0px solid #f1f1f1; */
   transition: 0.8s ease;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.logo {
+  border-radius: 5px;
 }
 
 .bg-img {
@@ -48,13 +71,10 @@ header {
 
 .container {
   background-color: rgba(0, 0, 0, 0.4);
-  /* border-style: solid;
-  border-width: 0px 1px 0px 1px;
-  border-color: white; */
-  z-index: 2;
+  z-index: 1;
   width: 100vw;
   height: 70vh;
-  padding: 0px 15px;
+  padding: 0px 24px;
 }
 
 .hero-content {
@@ -97,13 +117,9 @@ header {
   align-content: center;
   text-align: center;
   text-align: center;
-  width: 100vw;
+  /* width: 100vw; */
   height: 70vh;
   color: white;
-}
-
-.logo {
-  border-radius: 5px;
 }
 
 li a {
@@ -125,10 +141,7 @@ footer {
   height: 100%;
   align-content: flex-end;
   background-color: rgba(0, 0, 0, 0.4);
-  /* border-style: solid;
-  border-width: 0px 1px 1px 1px;
-  border-color: white; */
-  padding: 0px 15px 15px;
+  padding: 0px 24px 15px;
 }
 
 .footer-navs {
@@ -172,9 +185,57 @@ footer p {
   width: 100%;
 }
 
+.copy-right {
+  font-size: medium;
+}
+
 @media (min-width: 768px) {
   #hero .hero-content h1 {
     font-size: 45px;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    border-radius: 5px;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    border-radius: 5px;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .copy-right {
+    font-size: xx-small;
   }
 }
