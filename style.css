@@ -199,6 +199,7 @@ footer p {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    margin-right: 10px;
   }
 
   .hamburger.active .bar:nth-child(2) {
