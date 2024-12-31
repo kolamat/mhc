@@ -30,7 +30,7 @@ header {
   gap: 30px;
   padding-right: 15px;
   color: black;
-  border: 1px 1px 0px solid #f1f1f1;
+  /* border: 1px 1px 0px solid #f1f1f1; */
   transition: 0.8s ease;
 }
 
@@ -48,9 +48,9 @@ header {
 
 .container {
   background-color: rgba(0, 0, 0, 0.4);
-  border-style: solid;
+  /* border-style: solid;
   border-width: 0px 1px 0px 1px;
-  border-color: white;
+  border-color: white; */
   z-index: 2;
   width: 100vw;
   height: 70vh;
@@ -125,24 +125,24 @@ footer {
   height: 100%;
   align-content: flex-end;
   background-color: rgba(0, 0, 0, 0.4);
-  border-style: solid;
+  /* border-style: solid;
   border-width: 0px 1px 1px 1px;
-  border-color: white;
+  border-color: white; */
   padding: 0px 15px 15px;
 }
 
-.foot-navs {
+.footer-navs {
   display: flex;
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
 }
 
-footer .foot-navs ul li {
+footer .footer-navs ul li {
   list-style: none;
 }
 
-footer .foot-navs,
+footer .footer-navs,
 .links,
 .student,
 .info,
@@ -150,7 +150,7 @@ footer .foot-navs,
   text-align: left;
 }
 
-footer .foot-navs .links,
+footer .footer-navs .links,
 .student,
 .info,
 .socials,
@@ -159,7 +159,7 @@ li {
   font-weight: 500;
 }
 
-.foot-navs p {
+.footer-navs p {
   font-weight: bold;
   width: fit-content;
   border-bottom: 3px solid #000;
