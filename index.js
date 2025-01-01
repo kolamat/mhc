@@ -7,6 +7,7 @@ const windowPathname = window.location.pathname;
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
+  Body.classList.toggle("active");
 });
 
 document.querySelectorAll(".nav-link").forEach((n) =>
@@ -16,12 +17,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     Body.classList.remove("active");
   })
 );
-
-// document.querySelector("body")((k) =>
-//   k.addEventListener("click", () => {
-//     // navMenu.classList.remove("active");
-//   })
-// );
 
 navLinkEls.forEach((navLinkEl) => {
   const navLinkPathname = new URL(navLinkEl.href).pathname;

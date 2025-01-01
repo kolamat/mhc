@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -121,9 +122,10 @@ header nav {
 
 #hero .hero-content a:hover {
   color: white;
+  border: 2px solid #fff;
   text-decoration: none;
   transition: all 0.3s ease;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 }
 
 #hero .hero-content p {
@@ -149,6 +151,7 @@ footer {
   height: 100%;
   align-content: flex-end;
   background-color: rgba(0, 0, 0, 0.4);
+  flex-basis: 0;
   padding: 0px 18px 15px;
 }
 
