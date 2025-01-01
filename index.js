@@ -1,5 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-links");
+const navLinkEls = document.querySelectorAll(".nav-link");
 const windowPathname = window.location.pathname;
 
 hamburger.addEventListener("click", () => {
@@ -14,8 +15,23 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-navMenu.forEach((navLinkEL) => {
-  if (navLinkEL.href.includes(windowPathname)) {
-    navLinkEL.classList.add("actives");
+navLinkEls.forEach((navLinkEl) => {
+  const navLinkPathname = new URL(navLinkEl.href).pathname;
+
+  if (
+    windowPathname === navLinkPathname ||
+    (windowPathname === "/index.html" && navLinkPathname === "/")
+  ) {
+    navLinkEl.classList.add("active-link");
   }
 });
+
+/* // THE FIRST WAY YOU USE IN SETTING AN ACTIVE LINK
+
+// navLinkEls.forEach((navLinkEl) => {
+//   const navLinkPathname = new URL(navLinkEl.href).pathname;
+
+//   if (navLinkEl.href.includes(windowPathname)) {
+//     navLinkEl.classList.add("active-link");
+//   }
+// }); */
