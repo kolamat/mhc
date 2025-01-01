@@ -53,6 +53,10 @@ header nav {
   border-radius: 5px;
 }
 
+.actives {
+  color: red;
+}
+
 .logo {
   border-radius: 5px;
 }
