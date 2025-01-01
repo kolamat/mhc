@@ -1,3 +1,4 @@
+const Body = document.querySelector("body");
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-links");
 const navLinkEls = document.querySelectorAll(".nav-link");
@@ -12,8 +13,15 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    Body.classList.remove("active");
   })
 );
+
+// document.querySelector("body")((k) =>
+//   k.addEventListener("click", () => {
+//     // navMenu.classList.remove("active");
+//   })
+// );
 
 navLinkEls.forEach((navLinkEl) => {
   const navLinkPathname = new URL(navLinkEl.href).pathname;
