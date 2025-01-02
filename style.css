@@ -121,6 +121,11 @@ header nav {
   border-radius: 50px;
 }
 
+.welcome {
+  font-size: 45px;
+  font-weight: bold;
+}
+
 #hero .hero-content a:hover {
   color: white;
   border: 2px solid #fff;
