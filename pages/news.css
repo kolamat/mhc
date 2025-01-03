@@ -24,6 +24,7 @@ h2 {
   align-items: center;
   border-radius: 10px;
   gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding: 0px 18px 40px;
 }
 
@@ -34,15 +35,15 @@ h2 {
   color: transparent;
 }
 
-@media (min-width: 640px) {
-  .school-activities {
+@media (max-width: 640px) {
+  /* .school-activities {
     max-width: 1280px;
     padding: 0 32px;
-  }
+  } */
 
   .news-board {
-    column-count: 3;
-    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
   }
 }
 
